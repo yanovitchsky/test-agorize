@@ -1,0 +1,24 @@
+<%= form_with(model: skill, local: true) do |form| %>
+  <% if skill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(skill.errors.count, "error") %> prohibited this skill from being saved:</h2>
+
+      <ul>
+      <% skill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="margin-bottom: 20px">
+    <label>Name</label>
+    <%= form.text_field :name%>
+    <label>Parent</label>
+    <%= form.select(:parent_id, Skill.where.not(id: @skill.id).where(parent_id: nil).all.map{|s| [s.name, s.id]}, :prompt => 'Select')%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

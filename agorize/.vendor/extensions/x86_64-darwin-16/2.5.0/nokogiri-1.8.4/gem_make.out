@@ -1,0 +1,177 @@
+current directory: /Users/yannakoun/Project/Perso/agorize/agorize/.vendor/gems/nokogiri-1.8.4/ext/nokogiri
+/Users/yannakoun/.rvm/rubies/ruby-2.5.1/bin/ruby -r ./siteconf20180726-9330-1g0q35j.rb extconf.rb --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/libxml2 --use-system-libraries
+checking if the C compiler accepts ... yes
+checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
+Building nokogiri using system libraries.
+pkg-config could not be used to find libxslt
+Please install either `pkg-config` or the pkg-config gem per
+
+    gem install pkg-config -v "~> 1.1"
+
+pkg-config could not be used to find libexslt
+Please install either `pkg-config` or the pkg-config gem per
+
+    gem install pkg-config -v "~> 1.1"
+
+checking for xmlParseDoc() in libxml/parser.h... no
+checking for xmlParseDoc() in -lxml2... yes
+checking for xsltParseStylesheetDoc() in libxslt/xslt.h... no
+checking for xsltParseStylesheetDoc() in -lxslt... yes
+checking for exsltFuncRegister() in libexslt/exslt.h... no
+checking for exsltFuncRegister() in -lexslt... yes
+checking for xmlHasFeature()... yes
+checking for xmlFirstElementChild()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetValidStructuredErrors()... yes
+checking for xmlSchemaSetValidStructuredErrors()... yes
+checking for xmlSchemaSetParserStructuredErrors()... yes
+creating Makefile
+
+current directory: /Users/yannakoun/Project/Perso/agorize/agorize/.vendor/gems/nokogiri-1.8.4/ext/nokogiri
+make "DESTDIR=" clean
+
+current directory: /Users/yannakoun/Project/Perso/agorize/agorize/.vendor/gems/nokogiri-1.8.4/ext/nokogiri
+make "DESTDIR="
+compiling html_document.c
+compiling html_element_description.c
+compiling html_entity_lookup.c
+html_entity_lookup.c:9:24: warning: unused parameter 'self' [-Wunused-parameter]
+static VALUE get(VALUE self, VALUE key)
+                       ^
+1 warning generated.
+compiling html_sax_parser_context.c
+compiling html_sax_push_parser.c
+compiling nokogiri.c
+compiling xml_attr.c
+compiling xml_attribute_decl.c
+compiling xml_cdata.c
+xml_cdata.c:29:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    content_str_len = RSTRING_LEN(content);
+                    ~ ^~~~~~~~~~~~~~~~~~~~
+/Users/yannakoun/.rvm/rubies/ruby-2.5.1/include/ruby-2.5.0/ruby/ruby.h:975:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/yannakoun/.rvm/rubies/ruby-2.5.1/include/ruby-2.5.0/ruby/ruby.h:971:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+xml_cdata.c:29:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    content_str_len = RSTRING_LEN(content);
+                    ~ ^~~~~~~~~~~~~~~~~~~~
+/Users/yannakoun/.rvm/rubies/ruby-2.5.1/include/ruby-2.5.0/ruby/ruby.h:976:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+2 warnings generated.
+compiling xml_comment.c
+compiling xml_document.c
+xml_document.c:3:38: warning: unused parameter 'key' [-Wunused-parameter]
+static int dealloc_node_i(xmlNodePtr key, xmlNodePtr node, xmlDocPtr doc)
+                                     ^
+1 warning generated.
+compiling xml_document_fragment.c
+compiling xml_dtd.c
+xml_dtd.c:47:47: warning: incompatible pointer types passing 'void (void *, void *, const xmlChar *)' (aka 'void (void *, void *, const unsigned char *)') to parameter of type 'xmlHashScanner' (aka 'void (*)(void *, void *, unsigned char *)') [-Wincompatible-pointer-types]
+  xmlHashScan((xmlHashTablePtr)dtd->entities, element_copier, (void *)hash);
+                                              ^~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/libxml2/libxml/hash.h:210:22: note: passing argument to parameter 'f' here
+                                         xmlHashScanner f,
+                                                        ^
+xml_dtd.c:69:48: warning: incompatible pointer types passing 'void (void *, void *, const xmlChar *)' (aka 'void (void *, void *, const unsigned char *)') to parameter of type 'xmlHashScanner' (aka 'void (*)(void *, void *, unsigned char *)') [-Wincompatible-pointer-types]
+  xmlHashScan((xmlHashTablePtr)dtd->notations, notation_copier, (void *)hash);
+                                               ^~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/libxml2/libxml/hash.h:210:22: note: passing argument to parameter 'f' here
+                                         xmlHashScanner f,
+                                                        ^
+xml_dtd.c:91:49: warning: incompatible pointer types passing 'void (void *, void *, const xmlChar *)' (aka 'void (void *, void *, const unsigned char *)') to parameter of type 'xmlHashScanner' (aka 'void (*)(void *, void *, unsigned char *)') [-Wincompatible-pointer-types]
+  xmlHashScan((xmlHashTablePtr)dtd->attributes, element_copier, (void *)hash);
+                                                ^~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/libxml2/libxml/hash.h:210:22: note: passing argument to parameter 'f' here
+                                         xmlHashScanner f,
+                                                        ^
+xml_dtd.c:113:47: warning: incompatible pointer types passing 'void (void *, void *, const xmlChar *)' (aka 'void (void *, void *, const unsigned char *)') to parameter of type 'xmlHashScanner' (aka 'void (*)(void *, void *, unsigned char *)') [-Wincompatible-pointer-types]
+  xmlHashScan((xmlHashTablePtr)dtd->elements, element_copier, (void *)hash);
+                                              ^~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/libxml2/libxml/hash.h:210:22: note: passing argument to parameter 'f' here
+                                         xmlHashScanner f,
+                                                        ^
+4 warnings generated.
+compiling xml_element_content.c
+compiling xml_element_decl.c
+compiling xml_encoding_handler.c
+xml_encoding_handler.c:24:27: warning: unused parameter 'klass' [-Wunused-parameter]
+static VALUE delete(VALUE klass, VALUE name)
+                          ^
+xml_encoding_handler.c:36:26: warning: unused parameter 'klass' [-Wunused-parameter]
+static VALUE alias(VALUE klass, VALUE from, VALUE to)
+                         ^
+2 warnings generated.
+compiling xml_entity_decl.c
+compiling xml_entity_reference.c
+compiling xml_io.c
+xml_io.c:54:30: warning: unused parameter 'ctx' [-Wunused-parameter]
+int io_close_callback(void * ctx) {
+                             ^
+1 warning generated.
+compiling xml_libxml2_hacks.c
+compiling xml_namespace.c
+compiling xml_node.c
+compiling xml_node_set.c
+xml_node_set.c:43:29: warning: unused parameter 'klass' [-Wunused-parameter]
+static VALUE allocate(VALUE klass)
+                            ^
+xml_node_set.c:322:41: warning: unused parameter 'rb_node' [-Wunused-parameter]
+static VALUE to_array(VALUE self, VALUE rb_node)
+                                        ^
+2 warnings generated.
+compiling xml_processing_instruction.c
+compiling xml_reader.c
+compiling xml_relax_ng.c
+compiling xml_sax_parser.c
+xml_sax_parser.c:88:9: warning: unused parameter 'self' [-Wunused-parameter]
+  VALUE self,
+        ^
+xml_sax_parser.c:126:7: warning: unused parameter 'nb_defaulted' [-Wunused-parameter]
+  int nb_defaulted,
+      ^
+2 warnings generated.
+compiling xml_sax_parser_context.c
+compiling xml_sax_push_parser.c
+compiling xml_schema.c
+compiling xml_syntax_error.c
+xml_syntax_error.c:10:34: warning: unused parameter 'ctx' [-Wunused-parameter]
+void Nokogiri_error_raise(void * ctx, xmlErrorPtr error)
+                                 ^
+1 warning generated.
+compiling xml_text.c
+compiling xml_xpath_context.c
+xml_xpath_context.c:162:48: warning: unused parameter 'ns_uri' [-Wunused-parameter]
+                                const xmlChar* ns_uri )
+                                               ^
+xml_xpath_context.c:172:52: warning: unused parameter 'ctx' [-Wunused-parameter]
+static void xpath_generic_exception_handler(void * ctx, const char *msg, ...)
+                                                   ^
+2 warnings generated.
+compiling xslt_stylesheet.c
+xslt_stylesheet.c:64:41: warning: unused parameter 'klass' [-Wunused-parameter]
+static VALUE parse_stylesheet_doc(VALUE klass, VALUE xmldocobj)
+                                        ^
+xslt_stylesheet.c:112:51: warning: unused parameter 'userdata' [-Wunused-parameter]
+static void swallow_superfluous_xml_errors(void * userdata, xmlErrorPtr error, ...)
+                                                  ^
+xslt_stylesheet.c:112:73: warning: unused parameter 'error' [-Wunused-parameter]
+static void swallow_superfluous_xml_errors(void * userdata, xmlErrorPtr error, ...)
+                                                                        ^
+xslt_stylesheet.c:226:17: warning: unused parameter 'uri' [-Wunused-parameter]
+        const xmlChar *uri, void *data)
+                       ^
+xslt_stylesheet.c:226:28: warning: unused parameter 'data' [-Wunused-parameter]
+        const xmlChar *uri, void *data)
+                                  ^
+5 warnings generated.
+linking shared-object nokogiri/nokogiri.bundle
+Cleaning files only used during build.
+rm -rf /Users/yannakoun/Project/Perso/agorize/agorize/.vendor/gems/nokogiri-1.8.4/ports/archives
+
+current directory: /Users/yannakoun/Project/Perso/agorize/agorize/.vendor/gems/nokogiri-1.8.4/ext/nokogiri
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20180726-9330-14fk68o/nokogiri

@@ -1,0 +1,8 @@
+<h1>SHOW SKILL</h1>
+<p id="notice"><%= notice %></p>
+<%= @skill.name %>
+<br>
+parent: <%= @skill.try(:parent).try(:name) %>
+<br>
+<%= link_to 'Edit', edit_skill_path(@skill) %> |
+<%= link_to 'Back', skills_path %>
